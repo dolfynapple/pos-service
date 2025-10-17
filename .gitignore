@@ -1,30 +1,92 @@
+# -----------------------------
+# Core Dependencies
+# -----------------------------
 /vendor/
 node_modules/
-npm-debug.log
-yarn-error.log
 
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
+# -----------------------------
+# Environment & Config
+# -----------------------------
+.env
+.env.*
+!.env.example
+auth.json
+composer.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+/.env.backup
+/.env.production
 
-# Laravel 5 & Lumen specific
-public/storage
-public/hot
-
-# Laravel 5 & Lumen specific with changed public path
-public_html/storage
-public_html/hot
+# -----------------------------
+# Framework Cache & Storage
+# -----------------------------
+bootstrap/cache/*.php
+!bootstrap/cache/.gitignore
 
 storage/*.key
-.env
+storage/*.log
+storage/framework/*
+storage/debugbar/*
+storage/logs/*
+storage/pail
+!storage/framework/.gitignore
+!storage/logs/.gitignore
+!storage/pail/.gitignore
+
+# -----------------------------
+# Compiled Assets
+# -----------------------------
+/public/build
+/public/hot
+/public/storage
+
+# -----------------------------
+# Testing & Coverage
+# -----------------------------
+.phpunit.result.cache
+.pest-results.json
+coverage/
+.phpunit.cache/
+.phpstan.cache/
+*.cover
+*.cov
+
+# -----------------------------
+# IDE / Editors
+# -----------------------------
+.idea/
+.vscode/
+.phpactor.json
+*.sublime-project
+*.sublime-workspace
+
+# -----------------------------
+# Vagrant / Docker / Sail
+# -----------------------------
 Homestead.yaml
 Homestead.json
 /.vagrant
-.phpunit.result.cache
+/.docker
+/.sail
+docker-compose*.yml
 
-/public/build
-/storage/pail
-.env.backup
-.env.production
-.phpactor.json
-auth.json
+# -----------------------------
+# Laravel Pint / Static Analysis
+# -----------------------------
+/pint.json
+/.php-cs-fixer.cache
+/.phpstan.neon
+/.phpstan.neon.dist
+/.rector.php
+
+# -----------------------------
+# Logs & Misc
+# -----------------------------
+*.log
+*.cache
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
